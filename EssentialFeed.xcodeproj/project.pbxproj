@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2318C97A29E4422000CBBFD8 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318C97929E4422000CBBFD8 /* RemoteFeedLoader.swift */; };
 		23FA53F129C75AB200CCF6B1 /* EssentialFeed.docc in Sources */ = {isa = PBXBuildFile; fileRef = 23FA53F029C75AB200CCF6B1 /* EssentialFeed.docc */; };
 		23FA53F729C75AB200CCF6B1 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FA53EC29C75AB200CCF6B1 /* EssentialFeed.framework */; };
 		23FA53FC29C75AB200CCF6B1 /* EssentialFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FA53FB29C75AB200CCF6B1 /* EssentialFeedTests.swift */; };
 		23FA53FD29C75AB200CCF6B1 /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 23FA53EF29C75AB200CCF6B1 /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23FA540729C75BB200CCF6B1 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FA540629C75BB100CCF6B1 /* FeedItem.swift */; };
+		23FA540829C75BB200CCF6B1 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FA540629C75BB100CCF6B1 /* FeedItem.swift */; };
+		23FA540A29C75CD300CCF6B1 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FA540929C75CD300CCF6B1 /* FeedLoader.swift */; };
+		23FA540B29C75CD300CCF6B1 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FA540929C75CD300CCF6B1 /* FeedLoader.swift */; };
+		23FA541729C761F300CCF6B1 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FA541629C761F300CCF6B1 /* RemoteFeedLoaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +30,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2318C97929E4422000CBBFD8 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		23FA53EC29C75AB200CCF6B1 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23FA53EF29C75AB200CCF6B1 /* EssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeed.h; sourceTree = "<group>"; };
 		23FA53F029C75AB200CCF6B1 /* EssentialFeed.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EssentialFeed.docc; sourceTree = "<group>"; };
 		23FA53F629C75AB200CCF6B1 /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23FA53FB29C75AB200CCF6B1 /* EssentialFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedTests.swift; sourceTree = "<group>"; };
+		23FA540629C75BB100CCF6B1 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		23FA540929C75CD300CCF6B1 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
+		23FA541629C761F300CCF6B1 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2318C97829E441ED00CBBFD8 /* FeedAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2318C97929E4422000CBBFD8 /* RemoteFeedLoader.swift */,
+			);
+			path = FeedAPI;
+			sourceTree = "<group>";
+		};
 		23FA53E229C75AB200CCF6B1 = {
 			isa = PBXGroup;
 			children = (
@@ -71,8 +89,10 @@
 		23FA53EE29C75AB200CCF6B1 /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
+				2318C97829E441ED00CBBFD8 /* FeedAPI */,
 				23FA53EF29C75AB200CCF6B1 /* EssentialFeed.h */,
 				23FA53F029C75AB200CCF6B1 /* EssentialFeed.docc */,
+				23FA540C29C75DC800CCF6B1 /* Feed Feature */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
@@ -81,8 +101,18 @@
 			isa = PBXGroup;
 			children = (
 				23FA53FB29C75AB200CCF6B1 /* EssentialFeedTests.swift */,
+				23FA541629C761F300CCF6B1 /* RemoteFeedLoaderTests.swift */,
 			);
 			path = EssentialFeedTests;
+			sourceTree = "<group>";
+		};
+		23FA540C29C75DC800CCF6B1 /* Feed Feature */ = {
+			isa = PBXGroup;
+			children = (
+				23FA540929C75CD300CCF6B1 /* FeedLoader.swift */,
+				23FA540629C75BB100CCF6B1 /* FeedItem.swift */,
+			);
+			path = "Feed Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2318C97A29E4422000CBBFD8 /* RemoteFeedLoader.swift in Sources */,
+				23FA540A29C75CD300CCF6B1 /* FeedLoader.swift in Sources */,
+				23FA540729C75BB200CCF6B1 /* FeedItem.swift in Sources */,
 				23FA53F129C75AB200CCF6B1 /* EssentialFeed.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23FA541729C761F300CCF6B1 /* RemoteFeedLoaderTests.swift in Sources */,
+				23FA540B29C75CD300CCF6B1 /* FeedLoader.swift in Sources */,
+				23FA540829C75BB200CCF6B1 /* FeedItem.swift in Sources */,
 				23FA53FC29C75AB200CCF6B1 /* EssentialFeedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +431,7 @@
 		23FA540429C75AB200CCF6B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G4J2B7F9AD;
@@ -410,6 +447,7 @@
 		23FA540529C75AB200CCF6B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G4J2B7F9AD;
